@@ -1,0 +1,35 @@
+<h1>{{titulo}}</h1>
+<a href="/articulos/create">Nuevo Artículo</a> |
+<a href="/logout">Cerrar sesión</a>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>ID</th>
+    <th>Descripción</th>
+    <th>Precio S/</th>
+    <th>Cantidad</th>
+    <th>Stock</th>
+    <th>Precio $</th>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>Acciones</th>
+  </tr>
+  {{#each articulos}}
+  <tr>
+    <td>{{id}}</td>
+    <td>{{descripcion}}</td>
+    <td>{{precio_soles}}</td>
+    <td>{{cantidad}}</td>
+    <td>{{stock}}</td>
+    <td>{{precio_dolares}}</td>
+    <td>{{marca}}</td>
+    <td>{{modelo}}</td>
+    <td>
+      <a href="/articulos/edit/{{_id}}">Editar</a> |
+      <form action="/articulos/delete/{{_id}}" method="POST" style="display:inline;">
+        <button type="submit">Eliminar</button>
+      </form>
+    </td>
+  </tr>
+  {{/each}}
+</table>

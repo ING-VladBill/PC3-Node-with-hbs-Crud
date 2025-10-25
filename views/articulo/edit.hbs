@@ -1,0 +1,12 @@
+<h1>Editar Artículo</h1>
+
+<form action="/articulos/update/{{articulo._id}}" method="POST">
+  <label>Descripción:</label><input type="text" name="descripcion" value="{{articulo.descripcion}}"><br>
+  <label>Precio S/:</label><input type="number" name="precio_soles" value="{{articulo.precio_soles}}"><br>
+  <label>Cantidad:</label><input type="number" name="cantidad" value="{{articulo.cantidad}}"><br>
+  <label>Stock:</label><input type="number" name="stock" value="{{articulo.stock}}"><br>
+  <label>Precio $:</label><input type="number" name="precio_dolares" value="{{articulo.precio_dolares}}"><br>
+  <label>Marca:</label><input type="text" name="marca" value="{{articulo.marca}}"><br>
+  <label>Modelo:</label><input type="text" name="modelo" value="{{articulo.modelo}}"><br>
+  <button type="submit">Actualizar</button>
+</form>
